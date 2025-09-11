@@ -18,6 +18,7 @@ const App = () => {
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
       <Navbar />
       <BrowserRouter >
+        <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/collection' element={<Collection />} />
         <Route path='/about' element={<About />} />
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/place-order' element={<PlaceOrder />} />
         <Route path='/orders' element={<Orders />} />
+          </Routes>
       </BrowserRouter >
     </div>
   )
