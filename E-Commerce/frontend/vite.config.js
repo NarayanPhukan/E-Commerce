@@ -7,5 +7,5 @@ export default defineConfig({
   plugins: [react(),
      tailwindcss(),
   ],
-   base: "/E-Commerce/",
+   base: "/E-Commerce/frontend",
 })
