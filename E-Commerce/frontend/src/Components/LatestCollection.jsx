@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import Title from './Title'
+import ProductItem from './ProductItem'
 
 const LatestCollection = () => {
 
@@ -9,7 +10,7 @@ const LatestCollection = () => {
 
     useEffect( ()=> {
         setLatestProducts(products.slice(0,10))
-    },[])
+    },[products])
     // console.log(products)
 
   return (
@@ -20,7 +21,14 @@ const LatestCollection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate maiores adipisci veritatis. Ullam repudiandae natus molestiae sed, omnis at expedita velit enim doloremque laborum molestias, deserunt maxime. Numquam, aliquid quam.</p>
         </div>
 
-        
+        {/* Rendering Products */}
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'>
+          {
+            latestProduct.map((item,index) => (
+              <ProductItem key={index} id={item.id} image={item.image} name={item.name} price={item.price} />
+            ))
+          }
+        </div>
 
     </div>
   )
