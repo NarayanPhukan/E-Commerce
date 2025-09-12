@@ -12,7 +12,7 @@ import PlaceOrder from './Pages/PlaceOrder';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import SearchBar from './Components/SearchBar';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   return (
