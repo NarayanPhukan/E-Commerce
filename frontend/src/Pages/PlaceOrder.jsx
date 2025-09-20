@@ -23,7 +23,8 @@ const PlaceOrder = () => {
         </div>
         <div className='flex gap-3'>
           <input type="number" placeholder='ZipCode' className='border border-gray-300 rounded py-1.5 px-3.5 w-full' />
-          <input type="text" placeholder='Country' className='border border-gray-300 rounded py-1.5 px-3.5 w-full' />
+          <input type="text" placeholder='Country' className='border border-gray-300 rounded py-1.5 px-3.5 w-full' 
+          />
         </div>
         <input type="number" placeholder='Phone' className='border border-gray-300 rounded py-1.5 px-3.5 w-full' />
       </div>
