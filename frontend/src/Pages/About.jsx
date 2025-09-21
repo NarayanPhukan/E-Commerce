@@ -19,6 +19,24 @@ const About = () => {
         <p>Our mission at Forever is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.</p>
         </div>
       </div>
+      <div className='text-xl py-4'>
+        <Title text1={'WHY'} text2={'CHOOSE US'} />
+      </div>
+
+      <div className='flex flex-col md:flex-row text-sm mb-20'>
+        <div className='border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
+          <b>Quality Assurance : </b>
+          <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aliquid tempora ab! Sequi aut sapiente illo natus doloremque in nulla. Minima aspernatur at tempore reiciendis reprehenderit impedit expedita? Voluptas, necessitatibus.</p>
+        </div>
+        <div className='border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
+          <b>Convenience : </b>
+          <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aliquid tempora ab! Sequi aut sapiente illo natus doloremque in nulla. Minima aspernatur at tempore reiciendis reprehenderit impedit expedita? Voluptas, necessitatibus.</p>
+        </div>
+        <div className='border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
+          <b>Exceptional Customer Service : </b>
+          <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aliquid tempora ab! Sequi aut sapiente illo natus doloremque in nulla. Minima aspernatur at tempore reiciendis reprehenderit impedit expedita? Voluptas, necessitatibus.</p>
+        </div>
+      </div>
     </div>
   )
 }
