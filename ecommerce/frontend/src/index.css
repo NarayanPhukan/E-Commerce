@@ -1,0 +1,33 @@
+/* 1️⃣ Google Fonts MUST be first */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+/* 2️⃣ Then Tailwind */
+@import "tailwindcss";
+
+/* 3️⃣ Then your custom stuff */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-lightHover: #fcf;
+}
+
+/* 4️⃣ Then normal CSS */
+* {
+  font-family: 'Outfit', sans-serif;
+}
+a.active hr{
+    display: block;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width:640px) {
+    a.active{
+        background-color: black;
+        color: white;
+    }
+}
