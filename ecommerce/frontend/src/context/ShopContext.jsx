@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { products } from "../assets/assets";
+import { ToastContainer, toast } from 'react-toastify';
 export const ShopContext = createContext()
 
 const ShopContextProvider = (props) => {
@@ -12,6 +13,11 @@ const ShopContextProvider = (props) => {
     
 
     const addToCart = async (itemId, size) => {
+
+        if (!size) {
+            toast.error('Please select a size');
+            return;
+        }
         let cartData = structuredClone(cartItems);
 
         if (cartData[itemId]) {
@@ -29,15 +35,34 @@ const ShopContextProvider = (props) => {
         setCartItems(cartData);
     }
 
-    useEffect(() => {  
-        localStorage.setItem('cart', JSON.stringify(cartItems));
-    }, [cartItems])
+    const getCartCount = () => {
+    let count = 0;
+
+    for (const itemId in cartItems) {
+        for (const size in cartItems[itemId]) {
+            if (cartItems[itemId][size] > 0) {
+                count += cartItems[itemId][size];
+            }
+        }
+    }
+
+    return count;
+}
+
+const updateCartItem = async (itemId, size, quantity) => {
+    let cartData = structuredClone(cartItems);
+
+    if (cartData[itemId]) {
+        cartData[itemId][size] = quantity;
+        setCartItems(cartData);
+    }
+}
 
     const value = {
         products, currency, delivery_fee,
         search, setSearch, showSearch, setShowSearch,
         cartItems, setCartItems,
-        addToCart
+        addToCart, getCartCount, updateCartItem
     }
 
     
